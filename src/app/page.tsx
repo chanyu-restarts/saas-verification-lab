@@ -52,7 +52,7 @@ export default function Home() {
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
             マーケティングの嘘を暴く。
             <br className="hidden md:block" />
-            自腹検証による一次情報だけのAIツール分析プラットフォーム。
+            独立検証による一次情報だけのAIツール分析プラットフォーム。
           </p>
 
           {/* CTAボタン */}
