@@ -88,7 +88,7 @@ export default function Home() {
             <div className="hidden sm:block w-px h-8 bg-slate-700" />
             <div className="flex items-center gap-2">
               <span className="text-2xl font-bold text-white">$5,000+</span>
-              <span>自腹投資</span>
+              <span>独立投資</span>
             </div>
             <div className="hidden sm:block w-px h-8 bg-slate-700" />
             <div className="flex items-center gap-2">

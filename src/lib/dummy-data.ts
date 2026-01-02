@@ -102,7 +102,7 @@ export const heygenReview: ReviewData = {
         {
             url: "https://heygen.com/?ref=verification-lab",
             label: "HeyGen公式サイト（14日間無料トライアル）",
-            disclosure: "このリンク経由で購入された場合、当ラボは紹介料を受け取ります。",
+            disclosure: "このリンク経由で申し込まれた場合、当ラボは紹介料を受け取ります。",
             isSponsored: false,
         },
     ],
