@@ -203,9 +203,6 @@ export default async function ReviewPage({ params }: PageProps) {
                                                 <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
                                             </a>
                                         </Button>
-                                        <p className="text-xs text-slate-500 mt-2">
-                                            {review.affiliateLinks[0].disclosure}
-                                        </p>
                                     </div>
                                 )}
                             </div>
