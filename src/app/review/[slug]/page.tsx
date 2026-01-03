@@ -96,9 +96,6 @@ export default async function ReviewPage({ params }: PageProps) {
             <main className="max-w-4xl mx-auto px-4 py-8">
                 {/* ===== 1. Header Area ===== */}
                 <section className="mb-8">
-                    {/* Trust Disclosure - 必須配置 */}
-                    <TrustDisclosureAlert className="mb-6" />
-
                     {/* H1 Title */}
                     <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 leading-tight mb-3">
                         {review.title}
@@ -111,7 +108,7 @@ export default async function ReviewPage({ params }: PageProps) {
                     )}
 
                     {/* Author & Date */}
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-6">
                         <div className="flex items-center gap-2">
                             <User className="h-4 w-4" aria-hidden="true" />
                             <span>{review.author.name}</span>
@@ -123,6 +120,9 @@ export default async function ReviewPage({ params }: PageProps) {
                             <span>更新: {review.updatedAt}</span>
                         </div>
                     </div>
+
+                    {/* Trust Disclosure - H1直下に配置 */}
+                    <TrustDisclosureAlert className="mb-0" />
                 </section>
 
                 <Separator className="my-8" />
