@@ -82,23 +82,7 @@ export const heygenReview: ReviewData = {
         },
     ],
 
-    forensicSections: [
-        {
-            title: "多言語対応の仕様確認",
-            description: "公式仕様によると、HeyGenは175以上の言語・方言に対応し、翻訳時にオリジナルのボイス・トーン・ペーシングを保持する機能を搭載。リップシンクは自動調整される。",
-            leftVideo: {
-                src: "/demo/heygen-sample.mp4",
-                label: "HeyGen",
-                poster: "/demo/heygen-poster.jpg",
-            },
-            rightVideo: {
-                src: "/demo/synthesia-sample.mp4",
-                label: "Synthesia",
-                poster: "/demo/synthesia-poster.jpg",
-            },
-            finding: "仕様上、HeyGenはリップシンク精度と多言語対応において業界トップクラスの機能を提供。",
-        },
-    ],
+    forensicSections: [],
 
     dealbreakers: [
         {
