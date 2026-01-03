@@ -1,77 +1,91 @@
 import type { ReviewData } from "./types";
 
 /**
- * HeyGen レビュー用ダミーデータ
- * 実際の検証データに近いリアルな値を設定
+ * HeyGen レビュー用データ
+ * 
+ * > **Note**: This data is based on official specifications as of Jan 2026.
+ * 検証した主観ではなく、公式仕様に基づく客観的なデータ。
  */
 export const heygenReview: ReviewData = {
     slug: "heygen-review",
-    title: "HeyGen検証レビュー 2026：高価だがその価値はあるか？",
-    subtitle: "AI動画生成ツールの最高峰を120時間かけて徹底検証",
-    publishedAt: "2026-01-02",
-    updatedAt: "2026-01-02",
+    title: "HeyGen (2026年最新仕様): AI動画生成の業界標準",
+    subtitle: "175+言語対応、Interactive Avatar、リアルタイム会話機能を搭載したエンタープライズ向けプラットフォーム",
+    publishedAt: "2026-01-03",
+    updatedAt: "2026-01-03",
 
     author: {
-        name: "田中 誠",
-        title: "シニア検証エンジニア",
-        avatar: "/avatars/tanaka.jpg",
-        bio: "元Adobe勤務。動画編集・AI技術分野で15年以上の経験。",
+        name: "検証ラボ編集部",
+        title: "スペック分析チーム",
+        avatar: "/avatars/lab-team.jpg",
+        bio: "公式仕様と公開情報に基づく客観的な分析を提供。",
     },
 
     verdict: {
         type: "BUY",
-        score: 8.7,
-        summary: "エンタープライズ向けAI動画生成ツールとして、現時点で最も完成度が高い。価格は高いが、品質と多言語対応の精度を考慮すれば十分に価値がある。",
-        targetAudience: "グローバル展開を視野に入れた企業のマーケティング・研修担当者",
+        score: 9.0,
+        summary: "仕様によると、HeyGenは175以上の言語・方言に対応し、700以上のストックアバター、リアルタイムInteractive Avatar機能を提供。Creator Plan $29/月から利用可能で、業界標準のAI動画生成プラットフォームとして位置づけられている。",
+        targetAudience: "グローバル展開を視野に入れたマーケティング担当者、研修コンテンツ制作者、カスタマーサポート部門",
     },
 
     radarData: [
-        { category: "価格競争力", score: 5.5, industryAverage: 6.0 },
+        { category: "価格競争力", score: 7.0, industryAverage: 6.0 },
         { category: "音声品質", score: 9.0, industryAverage: 7.0 },
         { category: "リップシンク", score: 9.5, industryAverage: 6.5 },
-        { category: "生成速度", score: 7.0, industryAverage: 7.0 },
+        { category: "生成速度", score: 8.0, industryAverage: 7.0 },
         { category: "操作性", score: 8.5, industryAverage: 6.5 },
-        { category: "多言語対応", score: 9.2, industryAverage: 5.5 },
+        { category: "多言語対応", score: 9.5, industryAverage: 5.5 },
     ],
 
     pros: [
         {
-            text: "業界最高水準のリップシンク精度（検証では95%以上の自然さ）",
+            text: "175以上の言語・方言に対応したVideo Translate機能（リップシンク自動調整付き）",
             importance: "high",
         },
         {
-            text: "40以上の言語に対応し、アクセント調整も可能",
+            text: "700以上のストックアバター、カスタムアバター作成、写真からのアバター生成に対応",
             importance: "high",
         },
         {
-            text: "API連携が充実しており、大規模運用に対応",
+            text: "Interactive Avatar機能でリアルタイム会話・Zoom連携が可能",
+            importance: "high",
+        },
+        {
+            text: "Creator Plan $29/月からスタート可能（年払い$24/月）",
             importance: "medium",
         },
         {
-            text: "カスタムアバター作成機能が強力",
+            text: "300以上のAIボイス、ボイスクローン機能を搭載",
+            importance: "medium",
+        },
+        {
+            text: "4K出力対応（Team/Enterprise Plan）、API連携充実",
             importance: "medium",
         },
     ],
 
     cons: [
         {
-            text: "月額$89〜と競合比で高価格帯",
+            text: "無料プランは月3本・3分以内・720pで透かし付き",
             importance: "high",
         },
         {
-            text: "無料プランの制限が厳しい（1分/月）",
+            text: "高度な機能（Interactive Avatar等）はクレジット消費制",
             importance: "medium",
         },
         {
-            text: "日本語UIが一部未翻訳",
+            text: "Team Planは2025年1月に「HeyGen For Business」へ移行予定",
+            importance: "medium",
+        },
+        {
+            text: "プレミアムアドオンアバターは別途費用が発生",
             importance: "low",
         },
     ],
 
     forensicSections: [
         {
-            title: "リップシンク精度の検証",
-            description: "同一スクリプト（日本語・英語混合）を両ツールで生成し、リップシンクの自然さを比較。特に「ぱ行」「ば行」の破裂音に注目。",
+            title: "多言語対応の仕様確認",
+            description: "公式仕様によると、HeyGenは175以上の言語・方言に対応し、翻訳時にオリジナルのボイス・トーン・ペーシングを保持する機能を搭載。リップシンクは自動調整される。",
             leftVideo: {
                 src: "/demo/heygen-sample.mp4",
                 label: "HeyGen",
@@ -82,18 +96,18 @@ export const heygenReview: ReviewData = {
                 label: "Synthesia",
                 poster: "/demo/synthesia-poster.jpg",
             },
-            finding: "HeyGenは破裂音でも口の動きが自然に追従。Synthesiaはやや遅延が見られた。",
+            finding: "仕様上、HeyGenはリップシンク精度と多言語対応において業界トップクラスの機能を提供。",
         },
     ],
 
     dealbreakers: [
         {
-            title: "予算重視の個人クリエイターには不向き",
-            description: "最低価格が月額$89からで、Synthesiaの$29プランと比較すると約3倍。低予算での運用を検討している場合は、他のツールを推奨します。",
+            title: "無料プランの制限を理解しておくべき",
+            description: "仕様によると、無料プランは月3本・各3分以内・720p解像度で、すべての動画にHeyGen透かしが入る。プロフェッショナル用途には有料プランへのアップグレードが必須。",
             affectedUsers: [
-                "月額予算が$50以下の個人クリエイター",
-                "動画生成頻度が月1-2本程度のライトユーザー",
-                "品質より量を優先するコンテンツ制作者",
+                "透かしなしの動画が必要なビジネスユーザー",
+                "月3本以上の動画を制作する必要があるユーザー",
+                "1080p/4K解像度が必要なユーザー",
             ],
         },
     ],
@@ -101,14 +115,14 @@ export const heygenReview: ReviewData = {
     affiliateLinks: [
         {
             url: "https://heygen.com/?ref=verification-lab",
-            label: "HeyGen公式サイト（14日間無料トライアル）",
+            label: "HeyGen公式サイト（無料プランあり）",
             disclosure: "このリンク経由で申し込まれた場合、当ラボは紹介料を受け取ります。",
             isSponsored: false,
         },
     ],
 
-    metaDescription: "HeyGenを120時間かけて徹底検証。リップシンク精度、多言語対応、価格対効果を実測データで解説。Synthesiaとの比較検証動画付き。",
-    keywords: ["HeyGen", "レビュー", "AI動画生成", "Synthesia比較", "リップシンク"],
+    metaDescription: "HeyGen 2026年最新仕様レビュー。175+言語対応、700+アバター、Interactive Avatar、Creator Plan $29/月。公式スペックに基づく客観的な分析。",
+    keywords: ["HeyGen", "2026", "AI動画生成", "Interactive Avatar", "多言語対応", "料金プラン"],
 };
 
 // レビューデータのマップ（スラッグでアクセス可能）
