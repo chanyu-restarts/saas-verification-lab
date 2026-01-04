@@ -147,7 +147,7 @@ export default async function ReviewPage({ params }: PageProps) {
                             <div>
                                 <VerdictRadarChart
                                     data={review.radarData}
-                                    productName="HeyGen"
+                                    productName={review.title.split(/[:\u3000\s(]/)[0]}
                                 />
                             </div>
 
