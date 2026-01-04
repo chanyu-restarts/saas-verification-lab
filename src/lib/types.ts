@@ -70,6 +70,7 @@ export interface Dealbreaker {
 export interface ReviewData {
     // 基本情報
     slug: string;
+    category: string;
     title: string;
     subtitle?: string;
     publishedAt: string;
@@ -92,6 +93,9 @@ export interface ReviewData {
 
     // アフィリエイト
     affiliateLinks: AffiliateLink[];
+
+    // 自由記述のHTMLコンテンツ（オプション）
+    content?: string;
 
     // SEO
     metaDescription: string;

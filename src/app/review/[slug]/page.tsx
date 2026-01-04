@@ -260,6 +260,20 @@ export default async function ReviewPage({ params }: PageProps) {
 
                 <Separator className="my-8" />
 
+                {/* ===== 2.5 Article Body (Optional) ===== */}
+                {review.content && (
+                    <section className="mb-12">
+                        <div
+                            className="prose prose-slate dark:prose-invert max-w-none 
+                            prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 prose-h2:text-slate-900 dark:prose-h2:text-slate-100
+                            prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-slate-800 dark:prose-h3:text-slate-200
+                            prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-p:mb-4
+                            prose-strong:font-bold prose-strong:text-slate-900 dark:prose-strong:text-slate-100"
+                            dangerouslySetInnerHTML={{ __html: review.content }}
+                        />
+                    </section>
+                )}
+
                 {/* ===== 3. Forensic Analysis ===== */}
                 {review.forensicSections.map((section, index) => (
                     <section key={index} className="mb-12" aria-labelledby={`forensic-${index}`}>
