@@ -1,3 +1,12 @@
+/**
+ * @AI_AGENT_INSTRUCTION
+ * 新しいレビュー記事を追加する際のルール:
+ * 1. `slug` は `title` から英語のURLスラッグを生成すること。
+ * 2. `category` は適切な既存IDを選ぶか、なければ `categories` 配列に新規追加すること。
+ * 3. `status` は常に "Verified" とすること。
+ * 4. `affiliateLinks` は情報がなければ空配列 `[]` でよい。
+ * 5. 本文テキストは適切なHTML/JSXタグ（h2, p, ul等）で整形して `content` に格納すること。
+ */
 import type { ReviewData } from "./types";
 
 /**
