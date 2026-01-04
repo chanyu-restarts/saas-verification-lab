@@ -460,7 +460,17 @@ export const claudeReview: ReviewData = {
     ],
 
     forensicSections: [],
-    dealbreakers: [],
+    dealbreakers: [
+        {
+            title: "ビジネス利用における「Web検索」と「制限」の弱点",
+            description: "Claudeは「既に持っている資料」の分析は最強ですが、「最新ニュースの検索」は苦手です。また、Teamプランでもメッセージ回数制限（Rate Limits）が厳しく、ヘビーユーザーは業務が中断するリスクがあります。",
+            affectedUsers: [
+                "リアルタイムのニュースや株価情報を扱う業務",
+                "1日に数百回以上のラリーを行うヘビーユーザー",
+                "Google検索と連動した最新情報の収集がメインの人",
+            ],
+        },
+    ],
     affiliateLinks: [],
     content: `
 <h2>市場の「覇者」に挑む、最強のスペシャリスト・ツール</h2>
@@ -477,6 +487,7 @@ export const claudeReview: ReviewData = {
     metaDescription: "Claude 2026レビュー。Artifacts機能と日本語精度が強み。Rate LimitsとWeb検索が課題。",
     keywords: ["Claude", "Artifacts", "2026", "日本語", "AI開発"],
 };
+
 
 
 // レビューデータのマップ（スラッグでアクセス可能）
