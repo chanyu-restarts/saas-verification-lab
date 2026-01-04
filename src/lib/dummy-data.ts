@@ -471,7 +471,14 @@ export const claudeReview: ReviewData = {
             ],
         },
     ],
-    affiliateLinks: [],
+    affiliateLinks: [
+        {
+            url: "https://www.anthropic.com/claude",
+            label: "Claude公式サイト（無料利用可）",
+            disclosure: "直接契約の場合、アフィリエイト収益は発生しません。",
+            isSponsored: false
+        }
+    ],
     content: `
 <h2>市場の「覇者」に挑む、最強のスペシャリスト・ツール</h2>
 <p>2026年のB2B AI市場で、汎用インフラとしてChatGPTが君臨する中、エンジニアやクリエイターはAnthropic社の<strong>Claude（クロード）</strong>に熱狂しています。Artifacts機能と文学的日本語が鍵です。</p>

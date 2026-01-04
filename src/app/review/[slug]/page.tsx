@@ -188,24 +188,26 @@ export default async function ReviewPage({ params }: PageProps) {
                                 </div>
 
                                 {/* CTAボタン */}
-                                {review.affiliateLinks[0] && (
-                                    <div>
-                                        <Button
-                                            size="lg"
-                                            className="w-full md:w-auto bg-blue-600 hover:bg-blue-700"
-                                            asChild
+                                <div className="mt-6">
+                                    <Button
+                                        size="lg"
+                                        className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold shadow-lg transition-transform hover:scale-105"
+                                        asChild
+                                    >
+                                        <a
+                                            href={review.affiliateLinks[0].url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center gap-2"
                                         >
-                                            <a
-                                                href={review.affiliateLinks[0].url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                {review.affiliateLinks[0].label}
-                                                <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
-                                            </a>
-                                        </Button>
-                                    </div>
-                                )}
+                                            <span>
+                                                {/* @ts-ignore: affiliate_text_cta is not yet in ReviewData type, falling back safely */}
+                                                {(review as any).affiliate_text_cta || "公式サイトはこちら"}
+                                            </span>
+                                            <ExternalLink className="h-5 w-5" aria-hidden="true" />
+                                        </a>
+                                    </Button>
+                                </div>
                             </div>
                         </div>
 
