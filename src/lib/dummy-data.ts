@@ -418,12 +418,74 @@ export const chatgptReview: ReviewData = {
     keywords: ["ChatGPT", "GPT-5", "2026", "Thinking Mode", "Advanced Data Analysis", "法人契約"],
 };
 
+/**
+ * Claude Review Data (2026)
+ */
+export const claudeReview: ReviewData = {
+    slug: "claude-review-2026",
+    category: "chat-ai",
+    title: "Claude 3.7/4.5 検証レビュー2026：なぜエンジニアと広報はChatGPTを捨ててこちらを選ぶのか？",
+    subtitle: "「Artifacts」による開発革命と、文学的な日本語力が生むプロフェッショナル層の熱狂",
+    publishedAt: "2026-01-04",
+    updatedAt: "2026-01-04",
+    author: {
+        name: "検証ラボ編集部",
+        title: "エンタープライズAI分析チーム",
+        avatar: "/avatars/lab-team.jpg",
+        bio: "公式仕様と公開情報に基づく客観的な分析を提供。",
+    },
+    verdict: {
+        type: "BUY",
+        score: 4.7,
+        summary: "Claudeは高度なArtifacts機能と自然な日本語生成でエンジニア・広報に最適。Rate LimitsやWeb検索の弱さが課題。",
+        targetAudience: "エンジニア、広報・ライティング担当、AI活用を検討する企業",
+    },
+    radarData: [
+        { category: "Artifacts機能", score: 9.5, industryAverage: 7.0 },
+        { category: "日本語精度", score: 9.2, industryAverage: 8.5 },
+        { category: "長文処理", score: 9.0, industryAverage: 7.5 },
+        { category: "処理速度", score: 8.5, industryAverage: 7.0 },
+        { category: "コスト", score: 8.0, industryAverage: 7.0 },
+        { category: "多機能性", score: 9.0, industryAverage: 7.5 },
+    ],
+    pros: [
+        { text: "Artifacts機能によりコードと同時にアプリをプレビュー可能", importance: "high" },
+        { text: "文学的で自然な日本語生成能力", importance: "high" },
+        { text: "長文コンテキスト（200k-500kトークン）処理精度が高い", importance: "high" },
+    ],
+    cons: [
+        { text: "メッセージ送信制限が厳しく業務が中断しやすい", importance: "high" },
+        { text: "Web検索機能が弱く最新情報取得に不向き", importance: "medium" },
+        { text: "安全性重視で過剰に回答を拒否するケースがある", importance: "medium" },
+    ],
+
+    forensicSections: [],
+    dealbreakers: [],
+    affiliateLinks: [],
+    content: `
+<h2>市場の「覇者」に挑む、最強のスペシャリスト・ツール</h2>
+<p>2026年のB2B AI市場で、汎用インフラとしてChatGPTが君臨する中、エンジニアやクリエイターはAnthropic社の<strong>Claude（クロード）</strong>に熱狂しています。Artifacts機能と文学的日本語が鍵です。</p>
+<h3>1. Artifacts機能：コードから即時アプリプレビューへ</h3>
+<p>Claudeは生成したコード（React, HTML/CSS等）をサイドパネルで即座にレンダリングし、<strong>「会話」から「共同制作」へ</strong>を実現します。これによりプロトタイピングが劇的に高速化し、開発者は対話的にUIを調整できます。</p>
+<h3>2. 文学的日本語生成</h3>
+<p>日本語においてClaudeは文脈を深く理解し、敬語や情緒的表現を自然に使い分けます。広報・ライティング担当は「翻訳調」や冗長さが少ない文章をそのまま利用でき、リライト工数が大幅に削減されます。</p>
+<h3>3. 長文コンテキスト処理</h3>
+<p>200k〜500kトークンの長文でも高精度で処理でき、技術ドキュメントや法務文書の要約・分析に強みがあります。</p>
+<h2>課題と注意点</h2>
+<p>しかし、<strong>Rate Limits</strong>が厳しく、業務が中断しやすい点や、Web検索が弱い点がデメリットです。また、安全性重視のため過剰に回答を拒否するケースがあります。</p>
+`,
+    metaDescription: "Claude 2026レビュー。Artifacts機能と日本語精度が強み。Rate LimitsとWeb検索が課題。",
+    keywords: ["Claude", "Artifacts", "2026", "日本語", "AI開発"],
+};
+
+
 // レビューデータのマップ（スラッグでアクセス可能）
 export const reviewsMap: Record<string, ReviewData> = {
     "heygen-review": heygenReview,
     "synthesia-review": synthesiaReview,
     "d-id-review": didReview,
     "chatgpt-review": chatgptReview,
+    "claude-review-2026": claudeReview,
 };
 
 // 全レビューの一覧取得
