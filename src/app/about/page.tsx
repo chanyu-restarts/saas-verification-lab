@@ -64,9 +64,9 @@ export default function AboutPage() {
                                     <li className="flex items-start gap-3">
                                         <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2.5" />
                                         <span className="text-slate-700 dark:text-slate-300">
-                                            <strong>100% 自社リソースによる実機検証</strong>
+                                            <strong>多角的なデータ分析による「客観的検証」</strong>
                                             <br />
-                                            <span className="text-sm text-slate-500">外部ライターによるまとめ記事ではなく、編集部が実際にツールを契約・操作して記事を執筆しています。</span>
+                                            <span className="text-sm text-slate-500">主観やマーケティング表現に惑わされず、公式ドキュメント、技術仕様書、世界中のユーザーコミュニティ（G2, Reddit等）の声をエンジニア視点で徹底分析。メリットだけでなく「現場で発生するリアルな課題」を浮き彫りにします。</span>
                                         </span>
                                     </li>
                                     <li className="flex items-start gap-3">
