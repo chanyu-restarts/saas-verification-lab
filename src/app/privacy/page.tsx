@@ -26,10 +26,15 @@ export default function PrivacyPage() {
                         <div className="flex items-center gap-3 mb-4">
                             <Cookie className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                             <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-                                個人情報の取り扱い・Cookieについて
+                                個人情報の利用目的・Cookieについて
                             </h2>
                         </div>
                         <div className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                            <p>
+                                <strong>個人情報の利用目的</strong><br />
+                                当ラボでは、お問い合わせフォーム等から取得した個人情報（お名前、メールアドレス等）は、お問い合わせへの回答および必要な業務連絡のみに利用いたします。
+                                法令で定められる場合を除き、ご本人の同意なく第三者に提供することはありません。
+                            </p>
                             <p>
                                 当サイト「SaaS Verification Lab」（以下、当ラボ）では、Googleによるアクセス解析ツール「Google Analytics」を利用しています。
                                 Google Analyticsはトラフィックデータの収集のためにCookie（クッキー）を使用します。
