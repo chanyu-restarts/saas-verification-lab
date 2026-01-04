@@ -245,6 +245,9 @@ export default function Home() {
               <Link href="/methodology" className="hover:text-slate-900 dark:hover:text-slate-100">
                 Methodology
               </Link>
+              <Link href="/privacy" className="hover:text-slate-900 dark:hover:text-slate-100">
+                Privacy
+              </Link>
               <Link href="/contact" className="hover:text-slate-900 dark:hover:text-slate-100">
                 Contact
               </Link>

@@ -145,6 +145,9 @@ export default function AboutPage() {
                         <Link href="/about" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 font-medium">
                             About
                         </Link>
+                        <Link href="/privacy" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100">
+                            Privacy
+                        </Link>
                         <Link href="/contact" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100">
                             Contact
                         </Link>
