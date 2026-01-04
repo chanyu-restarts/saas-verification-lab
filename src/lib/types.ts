@@ -93,6 +93,7 @@ export interface ReviewData {
 
     // アフィリエイト
     affiliateLinks: AffiliateLink[];
+    affiliate_text_cta?: string;
 
     // 自由記述のHTMLコンテンツ（オプション）
     content?: string;

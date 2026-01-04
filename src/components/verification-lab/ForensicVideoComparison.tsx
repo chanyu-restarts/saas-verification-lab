@@ -45,7 +45,7 @@ function useVideoSync(
         if (isPlaying) {
             animationFrameRef.current = requestAnimationFrame(syncVideos);
         }
-    }, [leftVideoRef, rightVideoRef, isPlaying]);
+    }, [isPlaying]);
 
     const play = useCallback(() => {
         const leftVideo = leftVideoRef.current;
@@ -56,7 +56,7 @@ function useVideoSync(
             rightVideo.play();
             setIsPlaying(true);
         }
-    }, [leftVideoRef, rightVideoRef]);
+    }, []);
 
     const pause = useCallback(() => {
         const leftVideo = leftVideoRef.current;
@@ -67,7 +67,7 @@ function useVideoSync(
             rightVideo.pause();
             setIsPlaying(false);
         }
-    }, [leftVideoRef, rightVideoRef]);
+    }, []);
 
     const reset = useCallback(() => {
         const leftVideo = leftVideoRef.current;
@@ -81,7 +81,7 @@ function useVideoSync(
             setIsPlaying(false);
             setCurrentTime(0);
         }
-    }, [leftVideoRef, rightVideoRef]);
+    }, []);
 
     const seek = useCallback(
         (time: number) => {
@@ -94,7 +94,7 @@ function useVideoSync(
                 setCurrentTime(time);
             }
         },
-        [leftVideoRef, rightVideoRef]
+        []
     );
 
     // 再生中は同期処理を実行
@@ -133,7 +133,7 @@ function useVideoSync(
                 leftVideo.removeEventListener("loadedmetadata", handleLoadedMetadata);
             }
         };
-    }, [leftVideoRef]);
+    }, []);
 
     return {
         isPlaying,
