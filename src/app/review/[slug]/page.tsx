@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getReviewBySlug, getAllReviews } from "@/lib/dummy-data";
+import { getReviewBySlug, getAllReviews } from "@/lib/reviews";
 import { TrustDisclosureAlert } from "@/components/verification-lab/TrustDisclosureAlert";
 import { ForensicVideoComparison } from "@/components/verification-lab/ForensicVideoComparison";
 import { VerdictRadarChart } from "@/components/verification-lab/VerdictRadarChart";
@@ -27,7 +27,7 @@ interface PageProps {
 
 // 静的生成用のパラメータ
 export async function generateStaticParams() {
-    const reviews = getAllReviews();
+    const reviews = await getAllReviews();
     return reviews.map((review) => ({
         slug: review.slug,
     }));
@@ -36,7 +36,7 @@ export async function generateStaticParams() {
 // メタデータ生成
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { slug } = await params;
-    const review = getReviewBySlug(slug);
+    const review = await getReviewBySlug(slug);
 
     if (!review) {
         return { title: "レビューが見つかりません" };
@@ -75,7 +75,7 @@ function getVerdictStyle(type: VerdictType) {
 
 export default async function ReviewPage({ params }: PageProps) {
     const { slug } = await params;
-    const review = getReviewBySlug(slug);
+    const review = await getReviewBySlug(slug);
 
     if (!review) {
         notFound();

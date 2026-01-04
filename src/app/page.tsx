@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllReviews } from "@/lib/dummy-data";
+import { getAllReviews } from "@/lib/reviews";
 import { ReviewCard } from "@/components/verification-lab/ReviewCard";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -12,8 +12,8 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export default function Home() {
-  const reviews = getAllReviews();
+export default async function Home() {
+  const reviews = await getAllReviews();
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
