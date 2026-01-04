@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getReviewBySlug, getAllReviews } from "@/lib/dummy-data";
 import { TrustDisclosureAlert } from "@/components/verification-lab/TrustDisclosureAlert";
@@ -320,10 +321,21 @@ export default async function ReviewPage({ params }: PageProps) {
 
             {/* Footer */}
             <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 mt-12">
-                <div className="max-w-4xl mx-auto px-4 py-6 text-center">
+                <div className="max-w-4xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-sm text-slate-500 dark:text-slate-500">
                         © 2026 SaaS Verification Lab. All rights reserved.
                     </p>
+                    <nav className="flex gap-6 text-sm">
+                        <Link href="/" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100">
+                            Home
+                        </Link>
+                        <Link href="/about" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100">
+                            About
+                        </Link>
+                        <Link href="/contact" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100">
+                            Contact
+                        </Link>
+                    </nav>
                 </div>
             </footer>
         </div>

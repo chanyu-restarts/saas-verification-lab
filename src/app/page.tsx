@@ -252,7 +252,7 @@ export default function Home() {
 
             {/* コピーライト */}
             <p className="text-sm text-slate-500 dark:text-slate-500">
-              © 2026 Verification Lab
+              © 2026 SaaS Verification Lab. All rights reserved.
             </p>
           </div>
         </div>
