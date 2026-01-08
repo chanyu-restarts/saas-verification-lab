@@ -100,7 +100,7 @@ export const review: ReviewData = {
 
     affiliateLinks: [
         {
-            url: "https://heygen.com/?ref=verification-lab",
+            url: "https://www.heygen.com/?sid=rewardful&via=saas-lab",
             label: "HeyGen公式サイト（無料プランあり）",
             disclosure: "このリンク経由で申し込まれた場合、当ラボは紹介料を受け取ります。",
             isSponsored: false,
