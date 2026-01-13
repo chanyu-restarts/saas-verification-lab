@@ -2,7 +2,7 @@ import type { ReviewData } from "@/lib/types";
 
 export const review: ReviewData = {
     slug: "google-notebooklm",
-    category: "knowledge-assistant",
+    category: "analysis-data",
     title: "NotebookLM: RAG特化型学習・分析エンジン",
     subtitle: "「ソース限定」の回答生成でハルシネーションを極小化",
     publishedAt: "2026-01-08",

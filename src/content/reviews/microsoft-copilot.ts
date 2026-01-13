@@ -2,7 +2,7 @@ import type { ReviewData } from "@/lib/types";
 
 export const review: ReviewData = {
     slug: "microsoft-copilot",
-    category: "office-assistant",
+    category: "text-assistant",
     title: "Microsoft Copilot: 統合型オフィスアシスタント",
     subtitle: "TeamsとWordで真価を発揮する、業務効率化の要",
     publishedAt: "2026-01-08",

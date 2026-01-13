@@ -9,7 +9,7 @@ import type { ReviewData } from "@/lib/types";
  */
 export const review: ReviewData = {
     slug: "synthesia-review",
-    category: "video-generation",
+    category: "video-motion",
     title: "Synthesia (2026 Enterprise Edition): エンタープライズ向けビジネス標準",
     subtitle: "Fortune 100企業の90%以上が採用。Express-2アバター、140+言語対応、ISO 42001認証取得",
     publishedAt: "2026-01-03",

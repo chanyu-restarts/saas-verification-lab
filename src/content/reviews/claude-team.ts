@@ -2,7 +2,7 @@ import type { ReviewData } from "@/lib/types";
 
 export const review: ReviewData = {
     slug: "claude-team",
-    category: "code-assistant",
+    category: "text-assistant",
     title: "Claude Team: エンジニアリング特化型ワークスペース",
     subtitle: "「Artifacts」が変える開発体験と圧倒的な実装能力",
     publishedAt: "2026-01-08",

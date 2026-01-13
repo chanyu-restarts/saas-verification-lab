@@ -2,7 +2,7 @@ import type { ReviewData } from "@/lib/types";
 
 export const review: ReviewData = {
     slug: "perplexity-enterprise",
-    category: "research-engine",
+    category: "analysis-data",
     title: "Perplexity Enterprise: 次世代ナレッジディスカバリーエンジン",
     subtitle: "「ググる」時間を消滅させる、自律型リサーチエージェント",
     publishedAt: "2026-01-08",

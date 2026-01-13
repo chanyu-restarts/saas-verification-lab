@@ -23,11 +23,11 @@ export const review: ReviewData = {
     },
 
     radarData: [
-        { category: "Versatility", score: 10.0, industryAverage: 8.5 },
-        { category: "Reasoning (o1)", score: 9.8, industryAverage: 8.0 },
-        { category: "Data Analysis", score: 9.5, industryAverage: 7.0 },
+        { category: "汎用性・エコシステム", score: 10.0, industryAverage: 8.5 },
+        { category: "推論能力・正確性", score: 9.8, industryAverage: 8.0 },
+        { category: "データ分析・可視化", score: 9.5, industryAverage: 7.0 },
         { category: "使いやすさ", score: 9.5, industryAverage: 8.5 },
-        { category: "Collaboration", score: 9.0, industryAverage: 7.5 }
+        { category: "共同作業・管理機能", score: 9.0, industryAverage: 7.5 }
     ],
 
     pros: [

@@ -9,7 +9,7 @@ import type { ReviewData } from "@/lib/types";
  */
 export const review: ReviewData = {
     slug: "d-id-review",
-    category: "video-generation",
+    category: "video-motion",
     title: "D-ID (2026 Creative Suite): リアルタイムAI Agents & API特化",
     subtitle: "1枚の画像からリアルな動画生成。100+言語対応、RAG技術搭載のインテリジェントAgents",
     publishedAt: "2026-01-03",

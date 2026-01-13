@@ -25,6 +25,66 @@ interface VerdictRadarChartProps {
     className?: string;
 }
 
+/**
+ * ラベルの日本語短縮マッピング（変換辞書）
+ * 長いカテゴリ名を全角4文字以内の日本語に変換
+ */
+const LABEL_MAPPING: Record<string, string> = {
+    // 開発・エンジニアリング系
+    "Coding Capability": "実装力",
+    "Context Handling": "文脈理解",
+    "UI/UX (Artifacts)": "操作性",
+    "Speed": "処理速度",
+    "Speed / Latency": "処理速度",
+    "Cost Performance": "コスパ",
+    "コストパフォーマンス": "コスパ",
+    "処理速度": "処理速度",
+
+    // リサーチ・ドキュメント系
+    "Accuracy (Grounding)": "正確性",
+    "Context Capacity": "記憶容量",
+    "Learning Aid": "学習支援",
+    "Learning Aid (Audio)": "学習支援",
+    "Integration": "連携性",
+    "Multimodal": "認識力",
+
+    // ChatGPT系
+    "Versatility": "汎用性",
+    "汎用性・エコシステム": "汎用性",
+    "Reasoning (o1)": "推論力",
+    "推論能力・正確性": "推論力",
+    "Data Analysis": "分析力",
+    "データ分析・可視化": "分析力",
+    "Ease of Use": "使いやすさ",
+    "使いやすさ": "使いやすさ",
+    "Collaboration": "協働性",
+    "共同作業・管理機能": "協働性",
+
+    // Perplexity系
+    "Search Efficiency": "検索力",
+    "Citation/Trust": "信頼性",
+    "Deep Research": "深掘力",
+    "Model Flexibility": "柔軟性",
+    "Security": "安全性",
+
+    // Microsoft Copilot系（ビジネス・Office系）
+    "Office Integration": "Office連携",
+    "Office連携": "Office連携",
+    "Meeting Summary": "会議要約",
+    "Data Accuracy (Excel)": "Excel精度",
+    "Internal Search": "社内検索",
+    "Cost Efficiency": "費用対効果",
+    "費用対効果": "費用対効果",
+};
+
+/**
+ * ラベル変換関数
+ * 辞書に存在しない場合は元のテキストをそのまま返す（フォールバック）
+ */
+function formatRadarLabel(value: string): string {
+    return LABEL_MAPPING[value] || value;
+}
+
 interface CustomTooltipProps {
     active?: boolean;
     payload?: Array<{
@@ -138,10 +198,11 @@ export function VerdictRadarChart({
                     />
                     <PolarAngleAxis
                         dataKey="category"
+                        tickFormatter={formatRadarLabel}
                         tick={{
-                            fill: "#64748b",
-                            fontSize: 12,
-                            fontWeight: 500,
+                            fill: "#4B5563",
+                            fontSize: 11,
+                            fontWeight: 600,
                         }}
                         tickLine={false}
                     />

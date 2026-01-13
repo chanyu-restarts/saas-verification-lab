@@ -9,7 +9,7 @@ import type { ReviewData } from "@/lib/types";
  */
 export const review: ReviewData = {
     slug: "heygen-review",
-    category: "video-generation",
+    category: "video-motion",
     title: "HeyGen (2026年最新仕様): AI動画生成の業界標準",
     subtitle: "175+言語対応、Interactive Avatar、リアルタイム会話機能を搭載したエンタープライズ向けプラットフォーム",
     publishedAt: "2026-01-03",

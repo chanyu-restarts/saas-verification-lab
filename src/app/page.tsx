@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllReviews } from "@/lib/reviews";
-import { ReviewCard } from "@/components/verification-lab/ReviewCard";
+import { CategorySection } from "@/components/CategorySection";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -8,12 +8,75 @@ import {
   Microscope,
   BarChart3,
   ChevronDown,
-  FlaskConical
+  FlaskConical,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+
+/**
+ * カテゴリグループ定義（7カテゴリ構成）
+ */
+const CATEGORY_GROUPS = {
+  textAssistant: {
+    title: "Text & Assistant",
+    subtitle: "文章・チャット・検索",
+    categories: ["text-assistant"],
+  },
+  imageDesign: {
+    title: "Image & Design",
+    subtitle: "画像・デザイン",
+    categories: ["image-design"],
+  },
+  videoMotion: {
+    title: "Video & Motion",
+    subtitle: "動画・モーション",
+    categories: ["video-motion"],
+  },
+  voiceMeeting: {
+    title: "Voice & Meeting",
+    subtitle: "音声・議事録",
+    categories: ["voice-meeting"],
+  },
+  analysisData: {
+    title: "Analysis & Data",
+    subtitle: "分析・データ活用",
+    categories: ["analysis-data"],
+  },
+  automationAgent: {
+    title: "Automation & Agent",
+    subtitle: "業務自動化・エージェント",
+    categories: ["automation-agent"],
+  },
+  appBuilder: {
+    title: "App Builder & No-Code",
+    subtitle: "アプリ開発・ノーコード",
+    categories: ["app-builder"],
+  },
+};
 
 export default async function Home() {
   const reviews = await getAllReviews();
+
+  // カテゴリ別にフィルタリング
+  const textAssistantReviews = reviews.filter((r) =>
+    CATEGORY_GROUPS.textAssistant.categories.includes(r.category)
+  );
+  const imageDesignReviews = reviews.filter((r) =>
+    CATEGORY_GROUPS.imageDesign.categories.includes(r.category)
+  );
+  const videoMotionReviews = reviews.filter((r) =>
+    CATEGORY_GROUPS.videoMotion.categories.includes(r.category)
+  );
+  const voiceMeetingReviews = reviews.filter((r) =>
+    CATEGORY_GROUPS.voiceMeeting.categories.includes(r.category)
+  );
+  const analysisDataReviews = reviews.filter((r) =>
+    CATEGORY_GROUPS.analysisData.categories.includes(r.category)
+  );
+  const automationAgentReviews = reviews.filter((r) =>
+    CATEGORY_GROUPS.automationAgent.categories.includes(r.category)
+  );
+  const appBuilderReviews = reviews.filter((r) =>
+    CATEGORY_GROUPS.appBuilder.categories.includes(r.category)
+  );
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
@@ -106,7 +169,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ===== B. Verified Reviews Grid ===== */}
+      {/* ===== B. Category-Based Reviews ===== */}
       <section
         id="reviews"
         className="py-16 md:py-24"
@@ -114,7 +177,7 @@ export default async function Home() {
       >
         <div className="max-w-6xl mx-auto px-4">
           {/* セクションヘッダー */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2
               id="reviews-heading"
               className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4"
@@ -127,30 +190,48 @@ export default async function Home() {
             </p>
           </div>
 
-          {/* レビューカードグリッド */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews.map((review) => (
-              <ReviewCard key={review.slug} review={review} />
-            ))}
+          {/* カテゴリ別セクション（7カテゴリ） */}
+          <CategorySection
+            title={CATEGORY_GROUPS.textAssistant.title}
+            subtitle={CATEGORY_GROUPS.textAssistant.subtitle}
+            reviews={textAssistantReviews}
+          />
 
-            {/* プレースホルダー: 今後追加予定 */}
-            {reviews.length < 3 && (
-              <>
-                <div className="rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-900/50 aspect-[4/3] flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <p className="text-slate-500 dark:text-slate-500 mb-2">Coming Soon</p>
-                    <p className="text-sm text-slate-400 dark:text-slate-600">Synthesia検証レビュー</p>
-                  </div>
-                </div>
-                <div className="rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-900/50 aspect-[4/3] flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <p className="text-slate-500 dark:text-slate-500 mb-2">Coming Soon</p>
-                    <p className="text-sm text-slate-400 dark:text-slate-600">D-ID検証レビュー</p>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
+          <CategorySection
+            title={CATEGORY_GROUPS.imageDesign.title}
+            subtitle={CATEGORY_GROUPS.imageDesign.subtitle}
+            reviews={imageDesignReviews}
+          />
+
+          <CategorySection
+            title={CATEGORY_GROUPS.videoMotion.title}
+            subtitle={CATEGORY_GROUPS.videoMotion.subtitle}
+            reviews={videoMotionReviews}
+          />
+
+          <CategorySection
+            title={CATEGORY_GROUPS.voiceMeeting.title}
+            subtitle={CATEGORY_GROUPS.voiceMeeting.subtitle}
+            reviews={voiceMeetingReviews}
+          />
+
+          <CategorySection
+            title={CATEGORY_GROUPS.analysisData.title}
+            subtitle={CATEGORY_GROUPS.analysisData.subtitle}
+            reviews={analysisDataReviews}
+          />
+
+          <CategorySection
+            title={CATEGORY_GROUPS.automationAgent.title}
+            subtitle={CATEGORY_GROUPS.automationAgent.subtitle}
+            reviews={automationAgentReviews}
+          />
+
+          <CategorySection
+            title={CATEGORY_GROUPS.appBuilder.title}
+            subtitle={CATEGORY_GROUPS.appBuilder.subtitle}
+            reviews={appBuilderReviews}
+          />
         </div>
       </section>
 

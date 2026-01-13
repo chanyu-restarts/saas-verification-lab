@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CATEGORY_META } from "@/lib/constants";
 import type { ReviewData, VerdictType } from "@/lib/types";
 
 interface ReviewCardProps {
@@ -36,15 +37,32 @@ function getVerdictLabel(type: VerdictType) {
     }
 }
 
+// カテゴリに応じたバッジ情報を取得
+function getCategoryBadge(category: string) {
+    const meta = CATEGORY_META[category];
+    if (meta) {
+        return {
+            label: meta.label,
+            className: meta.color,
+        };
+    }
+    // デフォルト
+    return {
+        label: "Tool",
+        className: "text-slate-700 bg-slate-100 dark:text-slate-300 dark:bg-slate-800",
+    };
+}
+
 /**
  * ReviewCard - レビュー記事のカードコンポーネント
  * 
- * トップページのグリッド表示用。
- * カード全体がリンクとして機能し、レビューページへ遷移。
+ * ミニマルでプロフェッショナルなデザイン。
+ * カテゴリバッジはテキストのみのPill shape。
  */
 export function ReviewCard({ review, className }: ReviewCardProps) {
     const scoreBadgeStyle = getScoreBadgeStyle(review.verdict.score);
     const verdictLabel = getVerdictLabel(review.verdict.type);
+    const categoryBadge = getCategoryBadge(review.category);
 
     return (
         <Link
@@ -73,6 +91,17 @@ export function ReviewCard({ review, className }: ReviewCardProps) {
 
                     {/* グラデーションオーバーレイ */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+
+                    {/* カテゴリバッジ（左上）- テキストのみPill shape */}
+                    <Badge
+                        className={cn(
+                            "absolute top-3 left-3",
+                            "text-xs font-medium px-2.5 py-0.5 rounded-full",
+                            categoryBadge.className
+                        )}
+                    >
+                        {categoryBadge.label}
+                    </Badge>
 
                     {/* スコアバッジ（右上） */}
                     <Badge
