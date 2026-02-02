@@ -44,7 +44,7 @@ export const review: ReviewData = {
         }
     ],
     affiliateLinks: [
-        { url: "https://gamma.app", label: "公式サイト", disclosure: "Standard", isSponsored: false }
+        { url: "https://try.gamma.app/flzeo52cu3i5", label: "公式サイト", disclosure: "Standard", isSponsored: false }
     ],
     metaDescription: "AIプレゼンツールGammaの徹底検証レビュー。Markdownからのスライド自動生成機能や、日本語縦書き非対応の注意点、推奨プラン(Plus)のROIを解説。",
     keywords: ["Gamma", "AIプレゼンテーション", "スライド生成", "ドキュメント作成", "SaaS"],
