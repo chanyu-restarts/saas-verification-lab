@@ -20,11 +20,11 @@ export const review: ReviewData = {
         targetAudience: "グローバルSaaS開発者、動画コンテンツ制作者、広報担当"
     },
     radarData: [
-        { category: "機能性", score: 4.9, industryAverage: 4.5 },
-        { category: "使いやすさ", score: 4.0, industryAverage: 4.0 },
-        { category: "処理速度", score: 4.8, industryAverage: 3.8 },
-        { category: "サポート", score: 4.5, industryAverage: 4.0 },
-        { category: "コストパフォーマンス", score: 3.8, industryAverage: 4.0 }
+        { category: "機能性", score: 9.8, industryAverage: 9.0 },
+        { category: "使いやすさ", score: 8.0, industryAverage: 8.0 },
+        { category: "処理速度", score: 9.6, industryAverage: 7.6 },
+        { category: "サポート", score: 9.0, industryAverage: 8.0 },
+        { category: "コストパフォーマンス", score: 7.6, industryAverage: 8.0 }
     ],
     pros: [
         { text: "Turbo v2.5モデルによる超低遅延生成は、リアルタイム対話エージェントを実現する", importance: "high" },

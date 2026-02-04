@@ -20,11 +20,11 @@ export const review: ReviewData = {
         targetAudience: "情報共有に課題を持つ組織、ドキュメント管理管理者"
     },
     radarData: [
-        { category: "機能性", score: 4.0, industryAverage: 4.0 },
-        { category: "使いやすさ", score: 3.0, industryAverage: 4.0 },
-        { category: "処理速度", score: 4.5, industryAverage: 3.5 },
-        { category: "サポート", score: 5.0, industryAverage: 3.5 },
-        { category: "コストパフォーマンス", score: 4.5, industryAverage: 4.0 }
+        { category: "機能性", score: 8.0, industryAverage: 8.0 },
+        { category: "使いやすさ", score: 6.0, industryAverage: 8.0 },
+        { category: "処理速度", score: 9.0, industryAverage: 7.0 },
+        { category: "サポート", score: 10.0, industryAverage: 7.0 },
+        { category: "コストパフォーマンス", score: 9.0, industryAverage: 8.0 }
     ],
     pros: [
         { text: "SlackやGoogle Driveと連携し、Notion外の情報も含めた横断的な回答生成が可能", importance: "high" },

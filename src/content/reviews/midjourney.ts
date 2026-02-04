@@ -20,11 +20,11 @@ export const review: ReviewData = {
         targetAudience: "Webデザイナー、マーケター、UI/UXエンジニア"
     },
     radarData: [
-        { category: "機能性", score: 5.0, industryAverage: 4.2 },
-        { category: "使いやすさ", score: 4.5, industryAverage: 3.5 },
-        { category: "処理速度", score: 3.5, industryAverage: 4.0 },
-        { category: "サポート", score: 2.5, industryAverage: 3.0 },
-        { category: "コストパフォーマンス", score: 4.0, industryAverage: 4.5 }
+        { category: "機能性", score: 10.0, industryAverage: 8.4 },
+        { category: "使いやすさ", score: 9.0, industryAverage: 7.0 },
+        { category: "処理速度", score: 7.0, industryAverage: 8.0 },
+        { category: "サポート", score: 5.0, industryAverage: 6.0 },
+        { category: "コストパフォーマンス", score: 8.0, industryAverage: 9.0 }
     ],
     pros: [
         { text: "Web Editorの実装により、Discord不要で画像編集・生成が可能になった", importance: "high" },

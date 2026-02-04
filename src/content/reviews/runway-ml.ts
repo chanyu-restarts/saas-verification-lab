@@ -20,11 +20,11 @@ export const review: ReviewData = {
         targetAudience: "動画マーケター、プロモーション担当、Webディレクター"
     },
     radarData: [
-        { category: "機能性", score: 4.7, industryAverage: 4.0 },
-        { category: "使いやすさ", score: 4.8, industryAverage: 3.5 },
-        { category: "処理速度", score: 3.0, industryAverage: 3.0 },
-        { category: "サポート", score: 3.5, industryAverage: 3.5 },
-        { category: "コストパフォーマンス", score: 3.0, industryAverage: 3.5 }
+        { category: "機能性", score: 9.4, industryAverage: 8.0 },
+        { category: "使いやすさ", score: 9.6, industryAverage: 7.0 },
+        { category: "処理速度", score: 6.0, industryAverage: 6.0 },
+        { category: "サポート", score: 7.0, industryAverage: 7.0 },
+        { category: "コストパフォーマンス", score: 6.0, industryAverage: 7.0 }
     ],
     pros: [
         { text: "Motion Brushにより「雲だけ動かす」といった部分的な動きの制御が可能", importance: "high" },

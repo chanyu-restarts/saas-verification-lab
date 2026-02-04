@@ -20,11 +20,11 @@ export const review: ReviewData = {
         targetAudience: "ドキュメント作成に追われるPM、エンジニア、セールス担当者"
     },
     radarData: [
-        { category: "機能性", score: 4.2, industryAverage: 3.8 },
-        { category: "使いやすさ", score: 3.5, industryAverage: 4.0 },
-        { category: "処理速度", score: 4.8, industryAverage: 3.5 },
-        { category: "サポート", score: 3.0, industryAverage: 3.5 },
-        { category: "コストパフォーマンス", score: 4.5, industryAverage: 4.0 }
+        { category: "機能性", score: 8.4, industryAverage: 7.6 },
+        { category: "使いやすさ", score: 7.0, industryAverage: 8.0 },
+        { category: "処理速度", score: 9.6, industryAverage: 7.0 },
+        { category: "サポート", score: 6.0, industryAverage: 7.0 },
+        { category: "コストパフォーマンス", score: 9.0, industryAverage: 8.0 }
     ],
     pros: [
         { text: "HTML/CSSベースのレスポンシブな生成物は、スマホでの閲覧体験がPDFより格段に優れる", importance: "high" },
