@@ -1,0 +1,34 @@
+--- AUDIT REPORT ---
+[URL WARNING] bardeen.ts: https://www.bardeen.ai
+[URL WARNING] canva.ts: https://www.canva.com/
+[URL WARNING] descript.ts: https://www.descript.com/
+[FIX REQUIRED] elevenlabs.ts
+  Verdict: 9.2
+  Radar Scores: 4.9, 4, 4.8, 4.5, 3.8
+  New Scores: 9.8, 8, 9.6, 9, 7.6
+[URL WARNING] elevenlabs.ts: https://elevenlabs.io
+[FIX REQUIRED] gamma-app.ts
+  Verdict: 9
+  Radar Scores: 4.2, 3.5, 4.8, 3, 4.5
+  New Scores: 8.4, 7, 9.6, 6, 9
+[URL WARNING] google-notebooklm.ts: https://notebooklm.google.com/
+[URL WARNING] guidde.ts: https://www.guidde.com
+[URL WARNING] jasper-ai.ts: https://www.jasper.ai/
+[FIX REQUIRED] midjourney.ts
+  Verdict: 9.5
+  Radar Scores: 5, 4.5, 3.5, 2.5, 4
+  New Scores: 10, 9, 7, 5, 8
+[URL WARNING] midjourney.ts: https://midjourney.com
+[FIX REQUIRED] notion-ai.ts
+  Verdict: 9
+  Radar Scores: 4, 3, 4.5, 5, 4.5
+  New Scores: 8, 6, 9, 10, 9
+[URL WARNING] notion-ai.ts: https://notion.so
+[URL WARNING] recraft.ts: https://www.recraft.ai
+[FIX REQUIRED] runway-ml.ts
+  Verdict: 8.5
+  Radar Scores: 4.7, 4.8, 3, 3.5, 3
+  New Scores: 9.4, 9.6, 6, 7, 6
+[URL WARNING] runway-ml.ts: https://runwayml.com
+[URL WARNING] suno.ts: https://suno.com/
+[URL WARNING] tldv.ts: https://tldv.io
